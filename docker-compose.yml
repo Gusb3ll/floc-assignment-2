@@ -1,0 +1,19 @@
+version: '3.8'
+
+volumes:
+  shop_data:
+
+
+services:
+  postgres:
+    container_name: shop-db
+    image: postgres:15-alpine
+    restart: on-failure
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_DB=shop
+      - POSTGRES_USER=local
+      - POSTGRES_PASSWORD=local
+    volumes:
+      - shop_data:/var/lib/postgresql/data

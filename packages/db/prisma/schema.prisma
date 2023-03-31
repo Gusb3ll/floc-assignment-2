@@ -1,0 +1,37 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+  output        = "../generated/client"
+}
+
+enum UserPermission {
+  READ
+  WRITE
+}
+
+model User {
+  id          String           @id @default(uuid())
+  email       String           @unique
+  username    String           @unique
+  password    String
+  permissions UserPermission[]
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Product {
+  id          String   @id @default(cuid())
+  title       String[]
+  description String
+  price       Decimal  @db.Decimal(10, 2)
+  image       String   @default("https://via.placeholder.com/256x256")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}

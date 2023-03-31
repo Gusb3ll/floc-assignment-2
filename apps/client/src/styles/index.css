@@ -1,0 +1,24 @@
+html {
+	font-family: 'Line', sans-serif;
+	background: #f8f8f8;
+}
+
+body {
+	background: #f8f8f8;
+}
+
+.react-colorful__saturation {
+	display: none;
+}
+
+.react-colorful__last-control {
+	border-radius: 8px !important;
+}
+
+.navbar-box:hover .navbar-item {
+	opacity: 0.4;
+}
+
+.navbar-item:hover {
+	opacity: 1 !important;
+}

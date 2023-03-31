@@ -1,0 +1,8 @@
+.next
+node_modules
+generated
+dist
+.turbo
+.env
+*.prod
+next-env.d.ts

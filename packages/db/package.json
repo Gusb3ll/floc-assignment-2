@@ -1,0 +1,28 @@
+{
+	"name": "@shop/db",
+	"version": "1.0.0",
+	"private": true,
+	"main": "dist/index.js",
+	"typings": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "pnpm db:generate && rimraf dist && swc src -d dist && tsc --build",
+		"db:push": "prisma db push",
+		"db:seed": "prisma db seed",
+		"db:studio": "prisma studio",
+		"db:generate": "prisma generate"
+	},
+	"prisma": {
+		"seed": "ts-node prisma/seeds/index.ts"
+	},
+	"dependencies": {
+		"@shop/core": "workspace:*",
+		"@nestjs/common": "9.3.12",
+		"@prisma/client": "4.12.0"
+	},
+	"devDependencies": {
+		"prisma": "4.12.0"
+	}
+}

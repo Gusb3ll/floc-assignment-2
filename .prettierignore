@@ -1,0 +1,6 @@
+dist
+generated
+node_modules
+.env
+.env.sample
+pnpm-lock.yaml
