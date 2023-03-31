@@ -27,13 +27,13 @@ export const seedUser = async (db: PrismaClient) => {
 				email: 'floc4@floc.is',
 				username: 'floc4',
 				password: await hashPassword('PPcc115@w'),
-				permissions: ['READ', 'WRITE'],
+				permissions: ['READ'],
 			},
 			{
 				email: 'floc5@floc.is',
 				username: 'floc5',
 				password: await hashPassword('-1-1-1-1@W'),
-				permissions: ['READ', 'WRITE'],
+				permissions: ['READ'],
 			},
 		],
 	})
