@@ -2,7 +2,7 @@
 
 ## Endpoints
 
-```
+```text
 Client
 https://assignment.kivotos.sh
 
@@ -33,6 +33,10 @@ cp .env.sample .env
 docker compose up -d
 
 pnpm install
+
+pnpm db:migrate:deploy
+
+pnpm db:seed
 
 pnpm build:package
 ```
