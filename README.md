@@ -1,5 +1,18 @@
 # Floc backend assignment 2
 
+## Endpoints
+
+```
+Client
+https://assignment.kivotos.sh
+
+Server
+https://assignment-api.kivotos.sh
+
+DB
+https://assignment-db.kivotos.sh
+```
+
 ## Monorepo directory
 
 ```text
